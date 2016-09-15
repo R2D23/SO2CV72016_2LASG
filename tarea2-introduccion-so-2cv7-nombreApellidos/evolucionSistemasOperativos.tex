@@ -1,0 +1,39 @@
+\section{Evoluci\'on de los Sistemas Operativos}
+
+	\textbf{Realice una sín de la evolución de los sistemas operativos, tomando en cuenta el libro: Operating Systems - Internals and Design Principles, 7th Edition, de William Stallings y utilizando la siguiente estructura:}
+
+	\begin{itemize}
+
+		\item Introducción\\
+		Para intentar entender los requerimientos claves de un Sistema Operativo y la importancia de las más notables características de los Sistemas Operativos contemporáneos, es útil considerar como los Sistemas Operativos han evolucionado en los años.
+		
+		\item Sistemas de procesamiento serial\\
+		
+		Un Sistema de Procesamiento Serial obtiene este nombre derivado de su modelo lineal en el que cada usuario tenía que “formarse en línea” para cargar sus programas. Estos generalmente se cargaban por medio de hardware, y con ellos todos los adicionales necesarios para hacerlo trabajar. En consecuencia, tenían dos graves problemas.\\
+		\textbf{La administración del tiempo.}\\
+		Generalmente las tareas debían cumplirse en periodos de tiempo estándar. De cumplirse antes o de fallar, el resto del tiempo se volvía tiempo de procesador desperdiciado. Del mismo modo, podría un usuario acabarse el tiempo sin lograr acabar su trabajo.\\
+		\textbf{Los tiempos de preparación.}\\
+		Con cada vez que un uso se le daba a la máquina; cada vez que se le cargaba un solo programa, el proceso se le denominaba trabajo. Este trabajo consistía en cargar todo lo necesario para el programa y enlazarlo. Si, por ejemplo, el programa fallaba, todo el proceso del tiempo de preparación tenía que repetirse de nuevo.
+		
+		
+		\item Sistemas Batch (lotes)\\
+		Los Sistemas de Batch separan a los usuarios del procesador en dos. El monitor que se encarga de administrar el uso del procesador, y el resto de los usuarios que no pueden usar directamente el procesador, pero deben pasar ‘’solicitud’’ al monitor. Estas solicitudes se les denomina lotes (batches).
+		Sin embargo, el monitor no deja de ser un simple programa de computación. Depende totalmente de la habilidad del procesador para tomar nuevas instrucciones. Otras capacidades deseables son:
+		\begin{itemize}
+		\item	La protección de memoria.
+		\item	Temporizador.
+		\item	Instrucciones privilegiadas.
+		\item	Interrupciones.
+		\end{itemize}
+		
+		El temporizador permite evitar que un programa usuario se quede indeterminadamente con el procesador. Las interrupciones agregan flexibilidad.
+		Finalmente, la protección de memoria y las instrucciones privilegiadas permitieron diseñarse el concepto de modo usuario y modo kernel. Dado que el monitor se ejecuta en modo kernel, tiene permisos privilegiados para usar el procesador en contraste a los demás programas.	
+		
+		\item Sistemas de multiprogramación Batch\\
+Este tipo de sistemas operativos permiten una forma de procesamiento de trabajos o procesos más eficiente, debido a que si se tiene suficiente memoria como para procesar el sistema operativo y dos programas de usuario o más, este permite que mientras trabaja con un proceso, y éste al terminar envía la petición para acceder a los dispositivos de entrada/salida, mientras éste proceso tiene acceso, se desplaza al siguiente proceso, para ocupar el tiempo de procesamiento de una forma más efectiva.
+Éste es la característica principal de un sistema operativo multiprograma o multitarea, pudiendo así trabajar con tres, cuatro o más tareas de manera simultánea. Éstas tareas pueden tener diferentes necesidades, desde requerir una mayor o menor capacidad de memoria, hasta necesitar hacer uso de algún dispositivo de entrada/salida o requerir más tiempo de procesamiento
+
+		\item Sistemas de Tiempo Compartido		\\
+		Con el proceso de multitareas, es posible hacer un poco más eficiente el procesamiento de batch, aún así, en ocasiones es necesario o preferible permitir que el usuario interactue de forma directa con la computadora, como para otras la transaccion de procesos, es esencial. En los años 60's se desarrollo el tiempo compartido, que era que el multiprograma permitia acceder a multiples tareas con batch al mismo tiempo, y de esta manera que multiples tareas fueran interactivas, es decir, que se ejecutaran casí simultamentamente, debido a que multiples tareas ocupaban el tiempo del procesador de manera compartida, permitiendo así que pudieran ejecutar multiples usuarios sus programas, y para una cantidad "n" de usuarios, el tiempo que ocupaba cada una de las tareas asignadas al procesador por cada usuario era un promedio de 1/n. A pesar de que tanto el procesamiento de batch como el tiempo compartido ocupaban el multiprograma, cada uno optimizaba o se centraba en diferentes puntos, por ejemplo: -El principal objetivo del multiprograma de Batch era maximizar el uso del procesador, mientras que el tiempo compartido minimizaba el tiempo de respuesta -En Batch los comandos de control de las tareas provenían de las mismas tareas, y para el tiempo compartido, los comandos se recibían desde la terminal.
+
+	\end{itemize}
