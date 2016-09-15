@@ -1,0 +1,79 @@
+\section{Arquitectura de una Computadora}
+
+	Tomando en cuenta el libro Guide to Assembly Language Programming in Linux de Sivarama P. Dandamudi, responda lo siguiente:
+
+	\begin{itemize}
+
+		\item Muestre el diagrama a bloques simplificado de un sistema de cómputo y describa cada bloque
+		   \includegraphics{imagenes/captura.png}
+		   Nivel 0: Consta de circuitos de lógica digital y la electrónica de apoyo asociados. Seejecutan las instrucciones de lenguaje máquina.
+		   Nivel 1: Una llamada al sistema es la manera programática en la que un programa de ordenador solicita un servicio al núcleo del sistema operativo.
+		   
+		   Nivel 2: El lenguaje de máquina es un pariente cercano del lenguaje ensamblador. Típicamente, hay un uno-a-uno correspondencia entre el lenguaje ensamblador y las instrucciones en lenguaje de máquina. El procesador
+sólo entiende el lenguaje de máquina, cuyas instrucciones consisten en cadenas de unos y ceros.
+		   Nivel 3: Programación en lenguaje ensamblador se conoce como programación de bajo nivel porque cada conjunto la enseñanza de idiomas realiza una tarea de menor nivel mucho en comparación con una instrucción en una
+lenguaje de alto nivel. Como consecuencia, para llevar a cabo la misma tarea, tiende código en lenguaje ensamblador a ser mucho más grande que el código equivalente lenguaje de alto nivel.
+		   Nivel 4: Los usuarios están bien informados sobre la aplicación y el lenguaje de alto nivel que utilizarían para escribir la solicitud software. No pueden, sin embargo, conocer los detalles internos del sistema a menos que también resultan estar involucrado en el desarrollo de software del sistema, tales como controladores de dispositivo, ensambladores, enlazadores, y así sucesivamente.
+		   		   
+		   Nivel 5: La resolución de problemas se realiza en uno de los lenguajes de alto nivel como C y
+Java. Un usuario interactuar con el sistema en este nivel debe tener un conocimiento detallado de software
+desarrollo. Por lo general, estos usuarios son los programadores de aplicaciones.
+		
+		\item Muestre el diagrama a bloques del sistema de memoria y descríbalo
+		\includegraphics{imagenes/captura2.png}
+		Adress and Data: La dirección y los datos de la unidad de memoria están conectados a las direcciones y buses de datos del sistema, respectivamente. Las señales de lectura y escritura vienen de el bus de control.
+		Write: La operación de escritura,
+Por otra parte, es destructiva, como escribir un valor en una ubicación destruye los contenidos previos que
+ubicación de memoria.
+		Read: La operación de lectura es no destructiva en el sentido de que se puede leer de una ubicación de la memoria
+tantas veces como se desee sin destruir el contenido de esa ubicación.
+		
+		\item Mencione las dos operaciones asociadas al sistema de memoria y los pasos que se siguen para llevar a cavo un ciclo de cada operación
+		
+		Read:
+		1.-Coloque la dirección del lugar para su lectura en el bus de direcciones.
+		2.-Active la señal de control de lectura de memoria en el bus de control.
+		3.- Esperar a que la memoria para recuperar los datos de la ubicación de memoria direccionada y colocarlo en el bus de datos.
+		4.- Lea los datos del bus de datos
+		5.- La caída de la lectura de memoria señal de control para terminar el ciclo de lectura.
+		
+		Write:
+		1.-Coloque la dirección del lugar para ser escrito en el bus de direcciones
+		2.- Colocar los datos que se escriben en el bus de datos.
+		3.- Active la señal de control de escritura de memoria en el bus de control.
+		4.-Espere a que la memoria para almacenar los datos del punto de abordar.
+		5.- La caída de la señal de escritura de la memoria de interrumpir el ciclo de escritura.
+		
+		\item Escriba los nombres de los tipos de memoria que se mencionan en la bibliografía
+		Read-Only Memories (ROM)
+		PROM (si la ROM no funciona)
+		Electrically erasable PROMs (EEPROMs).
+		Read/Write Memory
+		 Static random access memory (SRAM)
+		  Dynamic random access memory (DRAM)
+		  FPM DRAMs Fast page mode (FPM)DRAMs
+		  Extended Data Output (EDO) DRAM 
+		  Rambus DRAM (RDRAM).
+		
+		\item Mencione los tres pasos en el ciclo de ejecución del procesador y descríbalos
+		El procesador actúa como el controlador de todas las acciones o servicios proporcionados por el sistema. Puede ser considerado como la ejecución del siguiente ciclo de siempre:
+		1.- Obtener una instrucción de la memoria:
+		Extraer una instrucción desde la memoria principal consiste en colocar la dirección apropiada en la dirección de bus y la activación de la memoria de lectura de la señal en el bus de control para indicar a la memoria unidad que una instrucción debe leerse desde esa ubicación.
+		2.- Decodificar la instrucción (es decir, identificar la instrucción):
+		Decodificación implica la identificación de la instrucción que ha sido extraídas de la memoria.
+		3.- Ejecute la operación (es decir, realizar la acción especificada por la instrucción):
+		Para ejecutar una instrucción, el procesador contiene hardware que consta de circuitos de control y una unidad aritmética y lógica (ALU). Se necesita el circuito de control para proporcionar controles de temporización como así como para instruir a los componentes de hardware internos para realizar una operación específica.
+		
+		\item Muestre el diagrama de registros de la Arquitectura Intel de 32 bits, describa su clasificación y para qué sirve cada uno.
+		\includegraphics{imagenes/captura3.png}
+		
+		Hay cuatro registros de datos de 32 bits que se pueden utilizar para la aritmética y lógica, y otras operaciones
+Estos cuatro registros son únicos en que se pueden utilizar como sigue:
+		Cuatro registros de 32 bits (EAX, EBX, ECX, EDX).
+		Cuatro registros de 16 bits (AX, BX, CX, DX).
+		Ocho registros de 8 bits (AH, AL, BH, BL, CH, CL, DH, DL).
+		
+		Es posible usar un registro de 32 bits y acceder a su mitad inferior de los datos por el correspondiente nombre de registro de 16 bits.
+		 Del mismo modo, las dos inferiores bytes se puede acceder de forma individual mediante el uso del registro de 8 bits.
+
+	\end{itemize}
