@@ -1,0 +1,77 @@
+\section{processIds.c}
+
+	Muestre la pantalla de ejecucución del programa:
+
+	\begin{center}
+		Centrar aquí la imagen
+	\end{center}
+
+	Describa cuál es el propósito de las siguientes bibliotecas:
+
+	\begin{itemize}
+
+		\item unistd.h
+		\item sys/types.h
+
+	\end{itemize}
+
+	Mencione que representan los siguientes tipos de datos y donde estan definidos:
+
+	\begin{itemize}
+
+		\item pid\_t
+		\itme El tipo de datos pid_t representa identificadores de proceso.
+		\item Usted puede obtener el identificador de proceso de un proceso llamando getpid. 
+		
+		\item uid\_t
+		\item El tipo de dato uid_t representa el indentifcador del usuario.
+		\item Se puede obtener el identificador con la funcion getuid.
+				
+		\item gid\_t
+		\item El tipo de dato gid_t representa el identificador del grupo.
+		\item Se puede obtener el identificador con la funcion getgid.
+
+	\end{itemize}
+
+	Para las siguientes funciones, mencione dónde están definidas, qué es lo que proporcionan de salida y qué argumentos necesitan de entrada:
+
+	\begin{itemize}
+
+		\item getpid
+		\item La función getpid devuelve el identificador de proceso del proceso actual.
+		\item Esta definida en unistd.h
+		\item pid_t getpid(void);
+		
+		\item getppid
+		\item  La función getppid devuelve el identificador de proceso del padre del proceso
+		\item Esta definida en unistd.h
+		\item pid_t getppid(void);
+		
+		\item getuid
+		\item La función getpid () devolverá el identificador de usuario real del proceso de llamada.
+		\item La función getpid () siempre será exitoso y sin valor de retorno está reservado 
+		\itme para indicar el error.
+		\item Definido en unistd.h
+		\item uid_t getuid(void);
+	
+		\item geteuid
+		\item La función geteuid() devolverá el identificador de usuario del proceso en curso.
+		\item La función geteuid() siempre será exitoso y sin valor de retorno está reservado
+		\item para indicar un error.
+		\item Deefinido en unistd.h
+		\item uid_t geteuid(void);
+		
+		\item getgid
+		\item La función getgid () devolverá el ID de grupo real del proceso de llamada.
+		\item La función getgid () siempre será exitoso y sin valor de retorno está 
+		\item reservado para indicar un error.
+		\item Definido en unistd.h
+		\item gid_t getgid(void); 
+		
+		\item getegid
+		\item La función getegid () devolverá el ID de grupo efectivo del proceso en curso.
+		\item La función getpid () siempre será exitoso y sin valor de retorno está 
+		\item reservado para indicar un error.
+		\item Definido en unistd.h
+		\item gid_t getegid(void);
+	\end{itemize}
