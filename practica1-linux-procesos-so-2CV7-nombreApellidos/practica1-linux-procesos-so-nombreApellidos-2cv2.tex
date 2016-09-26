@@ -1,0 +1,36 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%    JosE David Ortega Pacheco      %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%   TIPO DE DOCUMENTO: ArtIculo   %%%%%%
+\documentclass[letterpaper,11pt]{article}
+
+%%%%%%%  ESPECIFICACION DE PAQUETES   %%%%%
+\usepackage[spanish]{babel} %Lenguaje: Espanol
+\usepackage{graphicx} %Manejo de imagenes
+\usepackage[utf8]{inputenc} %Conjunto de caracteres UTF8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%terminal
+%%%%%%%%%%%%%%%%%
+%%%%%%%    INICIO DEL CUERPO DEL DOCUMENTO    %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+    %Escribe "Tabla" en lugar de "Cuadro"
+    \renewcommand{\tablename}{Tabla}
+
+    %%%%%%%   INCLUYE PORTADA   %%%%%%%
+    \include{portada}
+
+    %%%%%%%   INCLUYE SECCIONES   %%%%%%%
+    %\include{./secciones/seccion1} %Puede ser inlude o input
+    \include{./instrucciones} %Instrucciones
+    \include{./processIds} %Programa 1
+ 	\include{./fork} %Programa 2
+    \include{./fork-2} %Programa 2
+    \include{./exec} %Programa 2
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%    FIN DEL CUERPO DEL DOCUMENTO    %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
